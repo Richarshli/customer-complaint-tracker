@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Customer Complaint Tracker</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="container">
+    <h1>Customer Complaint Tracker</h1>
+    <p>Track customer complaints, priority, status, and resolution notes.</p>
+
+    <input type="text" id="customerName" placeholder="Customer Name">
+    <input type="text" id="complaintType" placeholder="Complaint Type">
+
+    <select id="priority">
+      <option value="Low">Low Priority</option>
+      <option value="Medium">Medium Priority</option>
+      <option value="High">High Priority</option>
+      <option value="Urgent">Urgent</option>
+    </select>
+
+    <select id="status">
+      <option value="Open">Open</option>
+      <option value="In Review">In Review</option>
+      <option value="Resolved">Resolved</option>
+      <option value="Escalated">Escalated</option>
+    </select>
+
+    <textarea id="notes" placeholder="Complaint details and resolution notes"></textarea>
+
+    <button onclick="addComplaint()">Add Complaint</button>
+
+    <h2>Complaint Log</h2>
+
+    <table>
+      <thead>
+        <tr>
+          <th>Customer</th>
+          <th>Complaint Type</th>
+          <th>Priority</th>
+          <th>Status</th>
+          <th>Notes</th>
+        </tr>
+      </thead>
+      <tbody id="complaintTable"></tbody>
+    </table>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
